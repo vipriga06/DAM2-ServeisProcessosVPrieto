@@ -20,7 +20,7 @@ public class Main {
             // Acció al arribar: mostrar els resultats finals
             System.out.println("Suma: " + resultats[0]);
             System.out.println("Mitjana: " + resultats[1]);
-            System.out.println("Desviació estàndard: " + String.format("%.2f", resultats[2]));
+            System.out.println("Desviacio estandard: " + String.format("%.2f", resultats[2]));
         });
 
         // Tasca 1: Càlcul de la suma
@@ -28,11 +28,11 @@ public class Main {
             try {
                 double suma = Arrays.stream(DADES).sum();
                 resultats[0] = suma;
-                System.out.println("Càlcul de la suma completat.");
+                System.out.println("Calcul de la suma completat.");
                 barrera.await(); // Esperar sincronització
             } catch (InterruptedException | BrokenBarrierException e) {
                 Thread.currentThread().interrupt();
-                System.err.println("Error en càlcul de suma: " + e.getMessage());
+                System.err.println("Error en calcul de suma: " + e.getMessage());
             }
         });
 
@@ -42,11 +42,11 @@ public class Main {
                 double suma = Arrays.stream(DADES).sum();
                 double mitjana = suma / DADES.length;
                 resultats[1] = mitjana;
-                System.out.println("Càlcul de la mitjana completat.");
+                System.out.println("Calcul de la mitjana completat.");
                 barrera.await(); // Esperar sincronització
             } catch (InterruptedException | BrokenBarrierException e) {
                 Thread.currentThread().interrupt();
-                System.err.println("Error en càlcul de mitjana: " + e.getMessage());
+                System.err.println("Error en calcul de mitjana: " + e.getMessage());
             }
         });
 
@@ -57,11 +57,11 @@ public class Main {
                 double sumaQuadrats = Arrays.stream(DADES).map(x -> Math.pow(x - mitjana, 2)).sum();
                 double desviacio = Math.sqrt(sumaQuadrats / DADES.length);
                 resultats[2] = desviacio;
-                System.out.println("Càlcul de la desviació estàndard completat.");
+                System.out.println("Calcul de la desviació estàndard completat.");
                 barrera.await(); // Esperar sincronització
             } catch (InterruptedException | BrokenBarrierException e) {
                 Thread.currentThread().interrupt();
-                System.err.println("Error en càlcul de desviació: " + e.getMessage());
+                System.err.println("Error en calcul de desviació: " + e.getMessage());
             }
         });
 
@@ -70,6 +70,6 @@ public class Main {
         while (!executor.isTerminated()) {
             // Esperar terminació de totes les tasques
         }
-        System.out.println("Tots els càlculs estadístics han completat.");
+        System.out.println("Tots els calculs estadistics han completat.");
     }
 }

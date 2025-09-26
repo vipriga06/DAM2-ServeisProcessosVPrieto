@@ -34,7 +34,7 @@ public class Main {
                         // Esperar un moment i reintentar
                         TimeUnit.SECONDS.sleep(1);
                         if (aparcament.entrar(numCotxe)) {
-                            System.out.println("Cotxe " + numCotxe + " ha entrat després d'esperar.");
+                            System.out.println("Cotxe " + numCotxe + " ha entrat despres d'esperar.");
                         } else {
                             System.out.println("Cotxe " + numCotxe + " no pot entrar: encara ple.");
                         }
@@ -51,7 +51,7 @@ public class Main {
         while (!executor.isTerminated()) {
             // Esperar terminació de la simulació
         }
-        System.out.println("Simulació d'aparcament acabada.");
+        System.out.println("Simulacio d'aparcament acabada.");
     }
 
     // Classe per gestionar l'aparcament
