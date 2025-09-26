@@ -1,4 +1,4 @@
-package com.exercici2;
+package com.project;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

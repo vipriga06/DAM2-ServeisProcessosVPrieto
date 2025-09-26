@@ -1,4 +1,4 @@
-package com.exercici0;
+package com.project;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

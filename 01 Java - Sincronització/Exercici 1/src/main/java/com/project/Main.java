@@ -1,4 +1,4 @@
-package com.exercici1;
+package com.project;
 
 import java.util.Arrays;
 import java.util.concurrent.BrokenBarrierException;
