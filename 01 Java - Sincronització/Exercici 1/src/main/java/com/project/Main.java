@@ -57,11 +57,11 @@ public class Main {
                 double sumaQuadrats = Arrays.stream(DADES).map(x -> Math.pow(x - mitjana, 2)).sum();
                 double desviacio = Math.sqrt(sumaQuadrats / DADES.length);
                 resultats[2] = desviacio;
-                System.out.println("Calcul de la desviació estàndard completat.");
+                System.out.println("Calcul de la desviacio estandard completat.");
                 barrera.await(); // Esperar sincronització
             } catch (InterruptedException | BrokenBarrierException e) {
                 Thread.currentThread().interrupt();
-                System.err.println("Error en calcul de desviació: " + e.getMessage());
+                System.err.println("Error en calcul de desviacio: " + e.getMessage());
             }
         });
 
